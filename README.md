@@ -1,2 +1,2 @@
 # netflix-ui-clone
-A clone of Netflix website build with React.js
+A clone of Netflix website built with React.js
