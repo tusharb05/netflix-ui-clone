@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from './axios'; //since it was export default, so we can call it anything
+import axios from './axios'; 
 import "./Row.css";
 import Youtube from 'react-youtube';
 import movieTrailer from 'movie-trailer'
@@ -7,22 +7,16 @@ import movieTrailer from 'movie-trailer'
 const base_url = "https://image.tmdb.org/t/p/original"
 
 function Row({title, fetchUrl, isLargeRow}) {
-    // useState
-    const [movies, setMovies] = useState([]); //in brackets in useState(), we give initial values
+    const [movies, setMovies] = useState([]); 
     const [trailerURL, setTrailerURL] = useState('')
     useEffect(()=>{
-        //if [], run once when row loads then dont run again
-        // [movies] mean run everytime movies changes so movies here is a dependency
         async function fetchData(){
             const request = await axios.get(fetchUrl);
-            // console.log(request.data.results);
             setMovies(request.data.results);
             return request;
         }
         fetchData();
-        //when we use any variables from outside of the useEffect hook, we have to specify it in [] cuz they are now the dependencies.
     }, [fetchUrl])
-    // console.log(movies)
     const options = {
         height: "390",
         width: "100%",
