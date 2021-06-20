@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Netflix UI Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Made using React.js
 
 ## Available Scripts
 
