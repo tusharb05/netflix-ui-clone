@@ -3,8 +3,6 @@ import requests from './requests';
 import axios from './axios';
 import './Banner.css'
 
-const base_url = "https://image.tmdb.org/t/p/original"
-
 function Banner() {
     const [movie, setMovie] = useState([]);
     useEffect(()=>{
